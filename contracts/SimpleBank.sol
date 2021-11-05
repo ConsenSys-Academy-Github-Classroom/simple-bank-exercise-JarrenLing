@@ -14,7 +14,7 @@ contract SimpleBank {
     
     // Fill in the visibility keyword. 
     // Hint: We want to protect our users balance from other contracts
-    mapping (address => uint) balances ;
+    mapping (address => uint) balances;
     
     // Fill in the visibility keyword
     // Hint: We want to create a getter function and allow contracts to be able
@@ -65,7 +65,7 @@ contract SimpleBank {
     function enroll() public returns (bool){
       // 1. enroll of the sender of this transaction
       if(!enrolled[msg.sender]){
-        balance[msg.sender] = 0;
+        balances[msg.sender] = 0;
         enrolled[msg.sender] = true;
         emit LogEnrolled(msg.sender);
       }
