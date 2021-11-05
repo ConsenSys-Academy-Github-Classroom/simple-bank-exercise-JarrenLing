@@ -67,7 +67,7 @@ contract SimpleBank {
       if(!enrolled[msg.sender]){
         balance[msg.sender] = 0;
         enrolled[msg.sender] = true;
-        emit LogEnrolled[msg.sender];
+        emit LogEnrolled(msg.sender);
       }
       return enrolled[msg.sender];
     }
